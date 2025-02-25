@@ -49,3 +49,5 @@ CategoryName = 'History';
 UPDATE Category SET
 CategoryNo = 3
 WHERE CategoryNo = 2;
+
+desc product;
