@@ -87,7 +87,7 @@ DROP CONSTRAINT fk_orderdetail_product;
 -- 테이블 삭제
 DROP TABLE Product;
 
--- IoT 형태의 테이블로 다시 생성
+-- IOT(Index Organized Table)형태의 테이블로 생성해야 한다.
 CREATE TABLE Product (
     ProductNo NUMBER,
     ProductName varchar2(100) NOT NULL,
@@ -112,7 +112,7 @@ ALTER TABLE OrderDetail
 ADD CONSTRAINT fk_OrderDetail_Product FOREIGN KEY(ProductNo) 
 REFERENCES Product(ProductNo);
 
--- 해당 테이블의 인덱스 확인
+-- 해당 테이블의 인덱스들 확인
 SELECT table_name, index_name, column_name
 FROM all_ind_columns
 WHERE table_name = 'PRODUCT';

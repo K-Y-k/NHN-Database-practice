@@ -87,6 +87,8 @@ INSERT INTO Product VALUES (2, 'The Two Towers', 25000, 'Book of Legend', 1);
 INSERT INTO Product VALUES (4, 'Science', 45000, 'Book of Legend', 2);
 INSERT INTO Product VALUES (5, 'Newton', 8000, 'Science Magazine', 2);
 INSERT INTO Product VALUES (3, 'Return of the King', 25000, 'Book of Legend', 1);
+INSERT INTO Product VALUES (7, 'World War Z', 20000, 'Most interesting book', 2);
+INSERT INTO Product VALUES (6, 'Bourne Identity', 18000, 'Spy Novel', 1);
 
 SELECT * FROM Product;
 
@@ -95,8 +97,6 @@ SELECT tablename, indexname, indexdef
 FROM pg_indexes 
 WHERE tablename = 'product';
 
-INSERT INTO Product VALUES (7, 'World War Z', 20000, 'Most interesting book', 1);
-INSERT INTO Product VALUES (6, 'Bourne Identity', 18000, 'Spy Novel', 1);
 
 -- 클러스터를 생성
 CLUSTER product USING pk_product;
